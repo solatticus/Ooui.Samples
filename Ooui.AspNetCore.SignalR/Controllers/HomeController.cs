@@ -19,6 +19,11 @@ namespace Ooui.AspNetCore.SignalR.Controllers
             return View();
         }
 
+        public IActionResult Error()
+        {
+            return View();
+        }
+
         public ElementResult SignalRDemo()
         {
             var oe = new ChatSamplePage().GetOouiElement();
