@@ -28,5 +28,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ooui.WebAssembly\Ooui.WebAssembly.csproj" />
+    <ProjectReference Include="..\Ooui.Samples.Forms\Ooui.Samples.Forms.csproj" />
   </ItemGroup>
 </Project>
