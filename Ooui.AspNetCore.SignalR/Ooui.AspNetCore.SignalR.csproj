@@ -22,4 +22,7 @@
     <PackageReference Include="Ooui" Version="0.8.186" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ooui.WebAssembly\Ooui.WebAssembly.csproj" />
+  </ItemGroup>
 </Project>

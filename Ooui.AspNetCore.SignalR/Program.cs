@@ -28,6 +28,8 @@ namespace Ooui.AspNetCore.SignalR
                 .UseStartup<Startup>()
                 .Build();
 
+            Xamarin.Forms.Forms.Init();
+
             host.Run();
         }
     }
