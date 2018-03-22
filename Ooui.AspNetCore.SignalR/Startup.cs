@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Ooui.AspNetCore.SignalR.Hubs;
 
 namespace Ooui.AspNetCore.SignalR
 {
@@ -22,6 +23,9 @@ namespace Ooui.AspNetCore.SignalR
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSignalR(opt => {
+                opt.NegotiateTimeout = TimeSpan.FromSeconds(1);
+            });
 
             services.AddMvc();
         }
@@ -39,6 +43,10 @@ namespace Ooui.AspNetCore.SignalR
             }
 
             app.UseStaticFiles();
+
+            app.UseSignalR(routes => {
+                routes.MapHub<ChatHub>("/chat");
+            });
 
             app.UseOoui();
 
