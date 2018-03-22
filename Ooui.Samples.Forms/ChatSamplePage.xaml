@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Ooui.Samples.Forms.ChatSamplePage">
     <ContentPage.Content>
-        <Label Text="Hello from inside a WebAssembly using Xamarin Forms!" />
+        <Grid Margin="10"> 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="UsersListView" Grid.Row="0" Grid.Column="0" BackgroundColor="#EEEEEE"/>
+            <ListView x:Name="MessageListView" Grid.Row="0" Grid.Column="1" BackgroundColor="#DDDDDD"> 
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Entry Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" x:Name="InputMessage" Placeholder="Type your message here..."/>
+            <Button Text="Send Message" Grid.Row="1" Grid.Column="2" WidthRequest="150" Clicked="SendMessage_Click"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

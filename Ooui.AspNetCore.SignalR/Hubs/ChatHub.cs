@@ -6,10 +6,22 @@ namespace Ooui.AspNetCore.SignalR.Hubs
 {
     public class ChatHub : Hub
     {
-        public async Task Send(string message)
+		public override async Task OnConnectedAsync()
+		{
+            Console.WriteLine($@"Server| OnConnectedAsync From:{Context.ConnectionId}");
+
+            // let other connections know someone joined
+            await Clients.All.SendAsync("UserJoined", this.Context.ConnectionId);
+		}
+
+		public async Task Send(string message)
         {
+            Console.WriteLine($@"Server| Send From:{Context.ConnectionId} Message:{message}  ");
+
             // send the message to all connected clients
-            await Clients.All.SendAsync("Send", Context.User.Identity.Name, message);
+            await Clients.All.SendAsync("Send", Context.ConnectionId, message);
+
+            //TODO: Implement users/identity
         }
     }
 }
