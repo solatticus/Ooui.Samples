@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace Ooui.WebAssembly
+namespace Ooui.Samples.Forms
 {
     public partial class ChatSamplePage : ContentPage
     {

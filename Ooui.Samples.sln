@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ooui.AspNetCore.SignalR", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ooui.WebAssembly", "Ooui.WebAssembly\Ooui.WebAssembly.csproj", "{21220147-7462-479D-B8A4-B9030AC321CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ooui.Samples.Forms", "Ooui.Samples.Forms\Ooui.Samples.Forms.csproj", "{7C5DD191-5821-4DDB-92F6-247917A00220}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{21220147-7462-479D-B8A4-B9030AC321CC}.Release|x64.Build.0 = Release|Any CPU
 		{21220147-7462-479D-B8A4-B9030AC321CC}.Release|x86.ActiveCfg = Release|Any CPU
 		{21220147-7462-479D-B8A4-B9030AC321CC}.Release|x86.Build.0 = Release|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Debug|x64.Build.0 = Debug|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Debug|x86.Build.0 = Debug|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Release|x64.ActiveCfg = Release|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Release|x64.Build.0 = Release|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C5DD191-5821-4DDB-92F6-247917A00220}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
