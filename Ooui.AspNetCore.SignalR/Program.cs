@@ -14,7 +14,13 @@ namespace Ooui.AspNetCore.SignalR
     {
         public static void Main(string[] args)
         {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory()) //set the root folder
+                .AddJsonFile("hosting.json", optional: true) //use the urls from hosting.json
+                .Build();
+
             var host = new WebHostBuilder()
+                .UseConfiguration(configuration: config) //use the config that was just build
                 .UseSetting(WebHostDefaults.PreventHostingStartupKey, "true")
                 .ConfigureLogging((context, factory) =>
                 {
@@ -28,7 +34,7 @@ namespace Ooui.AspNetCore.SignalR
                 .UseStartup<Startup>()
                 .Build();
 
-            Xamarin.Forms.Forms.Init();
+            Xamarin.Forms.Forms.Init(); //initialize xamarin forms
 
             host.Run();
         }
