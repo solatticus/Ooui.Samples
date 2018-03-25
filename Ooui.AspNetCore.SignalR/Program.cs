@@ -16,7 +16,9 @@ namespace Ooui.AspNetCore.SignalR
         {
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory()) //set the root folder
+                .AddJsonFile("appsettings.json")
                 .AddJsonFile("hosting.json", optional: true) //use the urls from hosting.json
+                .AddEnvironmentVariables()
                 .Build();
 
             var host = new WebHostBuilder()
@@ -28,6 +30,7 @@ namespace Ooui.AspNetCore.SignalR
                     factory.AddConsole();
                     factory.AddDebug();
                 })
+                .UseUrls("http://0.0.0.0:5000")
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
