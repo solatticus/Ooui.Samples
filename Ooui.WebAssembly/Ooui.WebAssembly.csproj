@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ooui.Forms" Version="0.8.186" />
-    <PackageReference Include="Ooui" Version="0.8.186" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="Ooui.Forms" Version="0.9.206" />
+    <PackageReference Include="Ooui" Version="0.9.206" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="SignalRChatSample.cs" />
