@@ -4,6 +4,7 @@ Sample demonstrating the use of SignalR within Xamarin forms inside of a WebAsse
 # Using Ooui version 0.9.206
 
 ## Issues
+# ViewModel via XAML issue https://github.com/praeclarum/Ooui/issues/123
 * Entry.Text = string.Empty; isn't reflected in the UI for some reason. The ItemsSource bindings was fixed by Praeclarum
 
 ## Windows Notes - 3/2018
