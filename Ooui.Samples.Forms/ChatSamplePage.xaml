@@ -4,9 +4,12 @@
              xmlns:sample="Ooui.Samples.Forms"
              x:Class="Ooui.Samples.Forms.ChatSamplePage">
 
+    <!-- Currently a bug setting this in XAML, use the page constructor -->
+    <!--
     <ContentPage.BindingContext>
         <sample:ChatSampleViewModel />    
     </ContentPage.BindingContext>
+    -->
 
     <ContentPage.Content>
         <Grid Margin="10"> 

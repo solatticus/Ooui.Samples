@@ -14,7 +14,8 @@ namespace Ooui.Samples.Forms
         {
             InitializeComponent();
 
-            //BindingContext = new ChatSampleViewModel();
+            //setting this here due to a bug with XAML parsing apparently
+            BindingContext = new ChatSampleViewModel();
         }
     }
 }
