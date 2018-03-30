@@ -16,13 +16,13 @@ namespace Ooui.AspNetCore.SignalR
         {
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory()) //set the root folder
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile("appsettings.json") //TODO: move this to startup so env. can be used to sub
                 .AddJsonFile("hosting.json", optional: true) //use the urls from hosting.json
                 .AddEnvironmentVariables()
                 .Build();
 
             var host = new WebHostBuilder()
-                .UseConfiguration(configuration: config) //use the config that was just build
+                .UseConfiguration(configuration: config) //use the config that was just built
                 .UseSetting(WebHostDefaults.PreventHostingStartupKey, "true")
                 .ConfigureLogging((context, factory) =>
                 {
